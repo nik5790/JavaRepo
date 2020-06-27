@@ -1,0 +1,65 @@
+Ques 1 Write a selenium program to print all option text in any dropdown like all country names in IRCTC registeration page
+
+Program
+
+package weektwo;
+
+import java.util.List;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class IrctcDropdownData {
+
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+
+		ChromeDriver driver = new ChromeDriver();
+
+		driver.get("http://www.irctc.co.in/nget/train-search");
+		driver.manage().window().maximize();
+		Thread.sleep(3000);
+		
+		driver.findElementByXPath(
+				"/html/body/app-root/app-home/div[1]/app-header/p-dialog[2]/div/div[2]/div/form/div[2]/button").click();
+		Thread.sleep(3000);
+		driver.findElementByXPath("/html/body/app-root/app-home/div[1]/app-header/div[2]/div[2]/div[1]/a[6]").click();
+		Thread.sleep(5000);
+		
+
+		Select sc = new Select(driver.findElementByXPath("//*[@id='divMain']/div/app-user-registration/div[2]/div/div[2]/div[5]/form/div[11]/div[2]/select"));
+		List<WebElement> country = sc.getOptions();
+		for(WebElement list: country  )
+		{
+		System.out.println("Country Name :   " + list.getText());
+		
+	}
+		driver.quit();
+}
+}
+
+
+
+
+
+Ques2 How to switch the frame, from one frame to another frame? How to come out of the frame?
+Ans
+Right-click on the specific element and check for view Frame source option ,if it is avialble then it means the page includes frames.
+
+On the application where right click is disable then we have to check the iframe tag in inspector.
+
+
+There are 3 ways to switch between frames:
+1. driver.switchTo().frame(int  index): Defining the frame index number.
+2. driver.switchTo().frame(string Name OrId): Defining the frame element or Id.
+3. driver.switchTo().frame(WebElement  ): Defining the frame web element.
+
+
+To come out of the frame we will use
+ driver.switchTo().deafultContent();
+
+To go to parent frame we will use
+
+ driver.switchTo().parentframe();
+		

@@ -1,0 +1,73 @@
+Ques1  What are the conditions and loop in java.What is the difference between for loop and while loop.
+
+Ans 
+Conditions- define set of rules to execte method body 
+1. if -Method body will be executed if a specified condition is true
+2. else- Method body will be executed if the same condition is false
+3. else  To check for a new condition, if the first condition is false
+4. switch to check multiple condition.
+
+Loop- It is used to execute a set of instructions repeatedly 
+
+For Loop- It is used when we have fixed number of iterations.
+1. for loop
+2. while loop
+3. do while loop
+	
+Syntax
+for(init;condition;incr/decr){  
+-------body--------
+}
+Example- for(int i=0; i<=20; i=i+1)
+{
+System.out.println("Hello Java Program");
+
+}
+
+
+While Loop- It is used when we don not have fixed number of iterations.
+
+Syntax
+while(condition){  
+p---------body------------
+}
+
+Example- 
+int x=1
+while(x<10)
+{
+System.out.println("Hello Java Program");
+x++
+}
+
+
+
+Ques 2 What is an object in java and how to create an object. What is the difference between object,class and methodsin java.
+
+Ans  It is real world entity which has state and behaviour property.
+     
+Objet is created from a class using new keyword
+
+Example-Test T1 = new Test();
+
+
+
+Class- A class is the blueprint from which individual objects are created.
+Declartion- Each word should start with uppercase
+
+Signature of a Class
+Access modifier  Class keyword  Class Name
+
+
+Object-  It is instance of a class  which has state and behaviour property.
+
+
+Method-Method describes behavior of an object. A method is a collection of logical block that are grouped together to perform an operation
+Declartion- Start letter of first word will be in lower case and starting letter of other words should be in Upper case.
+
+Signature of a method
+Access modifier  Static/Non static  Return type  Method Name  (prameters)
+
+
+
+

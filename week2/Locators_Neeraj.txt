@@ -1,0 +1,25 @@
+Ques 1- What are the  Locators available to find and element using selenium. And Write when to use and when not to use.
+
+Ans- 		                When to use	                                                  When Not to use
+ Sr. No	  Locator		
+ 1.	   ID	               It is a most prefereed locator 	                                When it contain number                                                   2.	  Name	               It is used when ID  is not avaibale	                        When it is duplicate
+ 3.	  Class	               It is used when both ID and Name is not available	        When it is duplicate and having white spaces
+ 4.	  Tag Name	       It is used on a webtable                                         When it is duplicate
+ 5.	  CSS Selector 	       It is used for Image /Colour content	                        It may change
+ 6.	  linktext	       It is used when there is as Link or partial Link	                When it is duplicate
+ 7.	  Xpath	               It is last option  we used when none of ab	                It may change
+
+
+
+Ques 2- Why Id is most  preferred locator over Xpath. Explain with examples from your office or known Application. 
+Ans- It is used always when to find something uinquely and it is a most prefereed locator as it does not 
+     change when there is change in the HTML page also it is faster then Xpath.
+
+
+Example- Bureau of Immigration India
+https://indianfrro.gov.in/frro/FormC/accom_reg.jsp?t4g=2YZSU300
+
+<input autocomplete="OFF" name="u_id" type="text" class="fieldboxes" id="u_id" size="20" maxlength="20" value="" onkeyup="chkStringuserids(this);" onblur="CheckUser(this.value)" isdatepicker="true">
+
+we will use here ID here because its unique from other textfiled and also if their will be changes in the HTML page then it does not gets affected but in case of Xpath it will fail if changes are made in HTML page.
+
