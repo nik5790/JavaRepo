@@ -1,0 +1,83 @@
+package weektwo.daytwo;
+
+import java.util.Set;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class LearnAlerts {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+
+		
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+		
+		ChromeDriver driver = new ChromeDriver();
+		
+		driver.manage().window().maximize();
+		
+		driver.get("https://www.w3schools.com/js/tryit.asp?filename=tryjs_prompt");
+		
+		Thread.sleep(6000);
+		
+		WebElement newFrame=driver.findElementByXPath("//*[@id='iframeResult']");
+		
+		driver.switchTo().frame(newFrame);
+		
+		//driver.findElementByXPath("/html/body/button").click();
+
+	/*	Alert alert=driver.switchTo().alert();
+		
+		alert.sendKeys("Venzo");
+
+		String alertText=alert.getText();
+		
+		System.out.println(alertText);
+		
+		alert.dismiss();*/
+		
+		driver.switchTo().defaultContent();
+		
+		String winIdBeforeClick= driver.getWindowHandle();
+	
+		System.out.println(winIdBeforeClick);
+		
+		Set<String> allWinIDBeforeClick= driver.getWindowHandles();
+		
+		System.out.println(allWinIDBeforeClick);
+		
+	
+		
+		driver.findElementById("tryhome").click();
+		
+		String winIdAfterClick=driver.getWindowHandle();
+		
+		System.out.println(winIdAfterClick);
+		
+		Set<String> allWinIDAfterClick=driver.getWindowHandles();
+		
+		System.out.println(allWinIDAfterClick);
+		
+		
+		for(String eachId :allWinIDAfterClick) {
+			System.out.println(eachId);
+			driver.switchTo().window(eachId);
+		}
+		
+		
+		driver.findElementByLinkText("LEARN HTML").click();
+	
+		
+		for(String eachId:allWinIDAfterClick) {
+			driver.switchTo().window(eachId);
+			break;
+		}
+		
+		driver.findElementByXPath("/html/body/div[5]/div/a[4]").click();
+		
+		
+	}
+
+}

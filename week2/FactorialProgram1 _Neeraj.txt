@@ -1,0 +1,14 @@
+package weektwo;
+
+public class FactorialProgram {
+
+	public static void main(String[] args) {
+
+		int x=1;
+		for(int i=5;i>=1;i=i-1){
+			x = x*i;
+		}
+		System.out.println("Factorial of a number is " +x);
+	}
+
+}
