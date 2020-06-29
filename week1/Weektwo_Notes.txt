@@ -1,0 +1,40 @@
+
+Locators	When we can use				When we cannot use
+
+Id		Always(Most Preferred)			if it is having number in it
+
+Name		if id is not available			if it is a duplicate
+
+ClassName	if both id and name are not 		if it is a duplicate
+		avilable				if it is having white spaces
+
+TagName		if it is a webtable			if it is a duplicate
+
+LinkText	if it a link				if it is a duplicate
+
+CssSelector	if it is a image/colour content		it may change
+
+Xpath		it is the last option!			it may change
+
+
+
+
+Naming Conventions in Java:
+
+1. Package: complete package name should be in lower case:
+
+2. Class: Each word should start with upper case
+
+3. Methods: starting letter of 1st word will be in lower case, and starting letter of other words should be upper case
+
+
+
+
+ClassName object = new ClassName();
+
+
+
+
+
+
+

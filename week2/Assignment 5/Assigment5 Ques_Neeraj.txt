@@ -1,0 +1,28 @@
+Ques 1 What are 3 types of alerts? Various actions that can be performed on an alert? Can you take screenshot of an alert?
+
+AnsThree Types of alert
+1) Simple Alert-Text to read with "Ok" button.
+2) Confirmation Alert-Text to read with "Ok" and "Cancel" button.
+3) Prompt Alert- We can write
+
+To handle alert
+
+driver.switchTo().alert();
+
+Various actions that can be performed on an alert:
+
+1) alert.accept()- It will Click on "OK" button.
+
+2) alert.dismiss()- It will click on "Cancel" button.
+
+3) alert.getText()- It will get the text which is present on the Alert.
+
+4) alert.sendkeys()- It will the text to the prompt popup
+
+No we can not you take screenshot of an alert.
+
+
+
+Ques 2 What is Overloading how does it differ from Overriding?
+
+

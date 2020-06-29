@@ -1,0 +1,24 @@
+Ques 1 How to select country value dropdown from IRCTC website that start with E but the second match(select Egypt not Ecuador)
+
+Ans Select class will be used to select the value from the dropdown.
+
+Example-
+<option _ngcontent-c16="" size="5" value="55" class="ng-star-inserted">Ecuador</option>
+<option _ngcontent-c16="" size="5" value="56" class="ng-star-inserted">Egypt</option>
+
+we can use selectByVisibleText or Sc.selectByValue method to selct the particular value from the drop downlist.
+Select SC= new Select(element);
+Sc.selectByVisibleText("Egypt ")
+
+
+Ques 2 What are the different access modifiers available for the class and for the method?
+        Explain Each
+
+Ans There are four types of access modifier for Class & method.
+1. Public- It can be access anywhere 
+2. Private- It can be access only with in the class
+3. Protected-It can be access only within the package but with incase of inheritence we can acess it outside the package also.
+4. Default- It can be access only within the package
+
+
+
